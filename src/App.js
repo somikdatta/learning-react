@@ -5,7 +5,6 @@ import {
   Route
 } from 'react-router-dom'
 
-import HelloWorld from './Components/HelloWorld'
 import Header from './Components/Header'
 import Footer from './Components/Footer'
 import Home from './Views/Home'
@@ -18,8 +17,6 @@ function App() {
 
       <Router>
         <Header />
-
-        <HelloWorld name="Drake"/>
 
               <Switch>
                 <Route exact path="/">
