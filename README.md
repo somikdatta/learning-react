@@ -61,14 +61,26 @@ Example 2: Stateful Component
 
 - Prop (Properties)
  
- Pass in a prop - 
+    - Pass in a prop - 
 
     <HelloWorld name="Drake"/>
 
- Access prop -
+    - Access prop -
 
     function HelloWorld(props){
         return (
             <h1>Hello {props.name}</h1>
         )
     }
+
+##  Lecture 2: Simple App Plus Minus 
+
+`Features hooks, class based approach`
+
+- Functional approach
+
+    const [var, method_to_modify_var] = useState(initial_value_of_var)
+
+useState(val) function returns a var and a function and that's the reason to declare the LHS const above
+
+    - To modify var we reference method_to_modify_var(new_data)
