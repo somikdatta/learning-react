@@ -68,7 +68,7 @@ Example 2: Stateful Component
  Access prop -
 
     function HelloWorld(props){
-    return (
-        <h1>Hello {props.name}</h1>
-    )
+        return (
+            <h1>Hello {props.name}</h1>
+        )
     }
