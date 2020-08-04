@@ -63,15 +63,15 @@ Example 2: Stateful Component
  
     - Pass in a prop - 
 
-    <HelloWorld name="Drake"/>
+        <HelloWorld name="Drake"/>
 
     - Access prop -
 
-    function HelloWorld(props){
-        return (
-            <h1>Hello {props.name}</h1>
-        )
-    }
+        function HelloWorld(props){
+            return (
+                <h1>Hello {props.name}</h1>
+            )
+        }
 
 ##  Lecture 2: Simple App Plus Minus 
 
