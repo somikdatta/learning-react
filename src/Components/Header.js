@@ -2,7 +2,7 @@ import React from 'react'
 
 function Header(){
     return (
-        <header className="app-header">
+        <header className="border-b font-bold p-3">
             AppName
         </header>
     )
