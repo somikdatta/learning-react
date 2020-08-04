@@ -1,4 +1,6 @@
-#  Scripts
+# Notes on my learnings
+
+##  Scripts
 
 In the project directory, you can run:
 
@@ -124,3 +126,18 @@ module.exports = {
 `"build": "npm run build:css && react-scripts build",`
 
 - Restart server with npm start
+
+##  Lecture 5: Conditional Rendering
+`Render HTML conditionally`
+
+- Using state for conditional rendering
+```
+let menu=null;
+
+    if(showMenu){
+        menu = 
+        <div>
+            The menu
+        </div>
+    }
+```
