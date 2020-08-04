@@ -20,9 +20,9 @@ Builds the app for production to the `build` folder.
 
 - React is shipped with a component i.e. App.js as an example and is a pretty great example of a stateless functional component.
 
--All components must return at least one wrapper element.
+- All components must return at least one wrapper element.
 
--There must be one parent wrapper for returning multiple components, e.g.
+- There must be one parent wrapper for returning multiple components, e.g.
 
     return (
         <div>
@@ -31,32 +31,35 @@ Builds the app for production to the `build` folder.
         </div>
     )
 
--Components are of two kinds:
+- Components are of two kinds:
 1. Stateless Components or Functional Components
-
-    function HelloWorld(){
-    return (
-        <h1>Hello Drake</h1>
-    )
-    }
-
 2. Stateful Components or Class-Based Components
 
-    class HelloWorld extends React.Component{
-    render(){
+Example 1: Stateless Component
+
+    function HelloWorld(){
         return (
         <h1>Hello Drake</h1>
         )
     }
+
+Example 2: Stateful Component
+
+    class HelloWorld extends React.Component{
+        render(){
+            return (
+            <h1>Hello Drake</h1>
+            )
+        }
     }
 
--To pass a component in another component
+- To pass a component in another component
 
     <div>
       <HelloWorld/>
     </div>
 
--Prop (Properties)
+- Prop (Properties)
  
  Pass in a prop - 
 
