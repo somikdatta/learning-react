@@ -102,5 +102,25 @@ function Header(){
     )
 }
 ```
+##  Lecture 4: Add Tailwind CSS
 
+- Remove App.css & all its imports
+- `npm i tailwindcss`
+- `npm tailwindcss init`
+- `npm i postcss-cli && autoprefixer`
+- Create postcss.config.js with
+```
+module.exports = {
+    plugins: [
+        require('tailwindcss'),
+        require('autoprefixer')
+    ]
+}
+```
+- Modify package.json
+`"build:css": "postcss src/index.css -o src/tailwind.css",`
+`"watch:css": "postcss src/index.css -o src/tailwind.css -w",`
+`"start": "npm run build:css && react-scripts start",`
+`"build": "npm run build:css && react-scripts build",`
 
+- Restart server with npm start
