@@ -38,7 +38,7 @@ Builds the app for production to the `build` folder.
     return (
         <h1>Hello Drake</h1>
     )
-}
+    }
 
 2. Stateful Components or Class-Based Components
 
@@ -48,7 +48,7 @@ Builds the app for production to the `build` folder.
         <h1>Hello Drake</h1>
         )
     }
-}
+    }
 
 -To pass a component in another component
 
@@ -68,4 +68,4 @@ Builds the app for production to the `build` folder.
     return (
         <h1>Hello {props.name}</h1>
     )
-}
+    }
