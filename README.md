@@ -2,17 +2,17 @@
 
 ##  Scripts
 
-In the project directory, you can run:
+In the project directory, you can:
 
-### `npm start`
+### `yarn start`
 
 Starts a development server
 
-### `npm test`
+### `yarn test`
 
-Launches the test runner in the interactive watch mode.
+Launches the testner in the interactive watch mode.
 
-### `npm run build`
+### `yarn build`
 
 Builds the app for production to the `build` folder.
 
@@ -107,9 +107,9 @@ function Header(){
 ##  Lecture 4: Add Tailwind CSS
 
 - Remove App.css & all its imports
-- `npm i tailwindcss`
-- `npm tailwindcss init`
-- `npm i postcss-cli && autoprefixer`
+- `yarn i tailwindcss`
+- `yarn tailwindcss init`
+- `yarn i postcss-cli && autoprefixer`
 - Create postcss.config.js with
 ```
 module.exports = {
@@ -122,10 +122,10 @@ module.exports = {
 - Modify package.json
 `"build:css": "postcss src/index.css -o src/tailwind.css",`
 `"watch:css": "postcss src/index.css -o src/tailwind.css -w",`
-`"start": "npm run build:css && react-scripts start",`
-`"build": "npm run build:css && react-scripts build",`
+`"start": "yarn build:css && react-scripts start",`
+`"build": "yarn build:css && react-scripts build",`
 
-- Restart server with npm start
+- Restart server with yarn start
 
 ##  Lecture 5: Conditional Rendering
 `Render HTML conditionally`
@@ -140,4 +140,31 @@ let menu=null;
             The menu
         </div>
     }
+```
+
+##  Lecture 6: React Spring
+
+- Install react-spring
+`yarn add react-spring`
+- Define transitions
+```
+const menuTransitions = useTransition(showMenu,null, {
+        from: {opacity: 0, transform: 'translateX(-100%)'},
+        enter: {opacity:1, transform: 'translateX(0%)'},
+        leave: {opacity: 0, transform: 'translateX(-100%)'}
+    })
+```
+- Use it as follows
+```
+{
+    maskTransitions.map(({item, key, props})=>
+        item &&
+        <animated.div
+            key={key}
+            style={props}
+            className="bg-black-t-50 fixed top-0 left-0 w-full h-full z-50"
+            onClick={()=> setShowMenu(false)}>
+        </animated.div>
+    )
+}
 ```
