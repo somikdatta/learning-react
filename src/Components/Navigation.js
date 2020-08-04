@@ -43,7 +43,12 @@ function Navigation(){
                         key={key}
                         style={props}
                         className="fixed bg-white top-0 left-0 w-4/5 h-full z-50 shadow">
-                            This is the menu
+                            <span className="font-bold">
+                                The menu
+                            </span>
+                            <ul>
+                                <li>Home</li>
+                            </ul>
                     </animated.div>
                 )
             }
