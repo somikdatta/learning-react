@@ -142,7 +142,7 @@ let menu=null;
     }
 ```
 
-##  Lecture 6: React Spring
+##  Lecture 6: React Spring (Animations)
 
 - Install react-spring
 `yarn add react-spring`
@@ -168,3 +168,20 @@ const menuTransitions = useTransition(showMenu,null, {
     )
 }
 ```
+##  Lecture 6: React Router
+
+- Install React Router DOM
+`yarn add react-router-dom`
+- Add necessary imports
+```import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom'
+```
+- Make sure `Router` encapsulates at the topmost level
+
+- Router can contain `Link` which defines navigation URL
+
+- Router can contain `Switch` which in turn contains `Route` which acts as a router outlet for specified links
