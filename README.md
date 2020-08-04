@@ -88,3 +88,19 @@ Example 2: Stateful Component
 useState(val) function returns a var and a function and that's the reason to declare the LHS const above
 
     - To modify var we reference method_to_modify_var(new_data)
+
+##  Lecture 3: Conventional CSS class styling
+
+- Add styles in CSS file
+- Use the class name like so
+```
+function Header(){
+    return (
+        <header className="app-header">
+            AppName
+        </header>
+    )
+}
+```
+
+
