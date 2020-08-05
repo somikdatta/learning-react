@@ -9,6 +9,7 @@ import Header from './Components/Header'
 import Footer from './Components/Footer'
 import Home from './Views/Home'
 import About from './Views/About'
+import Product from './Views/Product'
 
 
 function App() {
@@ -25,6 +26,9 @@ function App() {
                 </Route>
                 <Route path="/about">
                   <About/>
+                </Route>
+                <Route path="/products/:id">
+                  <Product/>
                 </Route>
               </Switch>
           </div>
