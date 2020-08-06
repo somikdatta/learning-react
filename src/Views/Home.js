@@ -1,31 +1,11 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import React from 'react'
 import ProductCard from '../Components/ProductCard'
+import { useAxiosGet } from '../Hooks/HttpRequests'
 
 function Home(){
     let content=null
     const url=`https://5f2a8d0d6ae5cc0016422a91.mockapi.io/api/v1/products?page=1&limit=10`
-    const [products,setProducts] = useState({
-        data: null,
-        error: false
-    })
-
-    useEffect(()=>{
-        axios.get(url)
-            .then(res=>{
-                setProducts({
-                    data: res.data,
-                    error: false
-                })
-            })
-            .catch(()=>{
-                setProducts({
-                    data: null,
-                    error: true
-                })
-            })
-    },[url])
-
+    let products = useAxiosGet(url)
 
     if(products.error){
         content = <p>

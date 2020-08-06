@@ -1,14 +1,12 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import React from 'react'
 import {useParams} from 'react-router-dom'
 import Skeleton from 'react-loading-skeleton';
+import { useAxiosGet } from '../Hooks/HttpRequests';
 function Product(){
     const {id} = useParams();
     const url=`https://5f2a8d0d6ae5cc0016422a91.mockapi.io/api/v1/products/${id}`
-    const [product,setProduct] = useState({
-        data: null,
-        error: false
-    })
+    
+    let product = useAxiosGet(url)
 
     let content = <div>
         <h1 className="text-2xl font-bold mb-3">
@@ -24,22 +22,6 @@ function Product(){
             <Skeleton />
         </div>
     </div>
-
-    useEffect(()=>{
-        axios.get(url)
-            .then(res=>{
-                setProduct({
-                    data: res.data,
-                    error: false
-                })
-            })
-            .catch(()=>{
-                setProduct({
-                    data: null,
-                    error: true
-                })
-            })
-    },[url])
 
     if(product.error){
         content = <p>
