@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import {useParams} from 'react-router-dom'
-
+import SkeletonLoader from '../Components/SkeletonLoader';
 function Product(){
     const {id} = useParams();
     const url=`https://5f2a8d0d6ae5cc0016422a91.mockapi.io/api/v1/products/${id}`
     const [product,setProduct] = useState(null)
 
-    let content = null
+    let content = <SkeletonLoader/>
 
     useEffect(()=>{
         axios.get(url)
