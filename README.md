@@ -185,3 +185,13 @@ const menuTransitions = useTransition(showMenu,null, {
 - Router can contain `Link` which defines navigation URL
 
 - Router can contain `Switch` which in turn contains `Route` which acts as a router outlet for specified links
+
+## Lecture 7: Axios - HTTP Requests
+
+- Install axios by
+`yarn add axios`
+- axios works on the mechanisms of promise (then, catch - resolve, reject)
+- Implementation
+```
+axios.method(url).then().catch()
+```
