@@ -195,3 +195,28 @@ const menuTransitions = useTransition(showMenu,null, {
 ```
 axios.method(url).then().catch()
 ```
+
+## Lecture 8: Hooks
+
+- Hooks let us use state and other React features without using a class i.e. through classless components
+
+- Two introductory hooks
+
+1. useState(value)
+```
+const [state,stateSetterMethod] = useState(initialValue)
+```
+`Example: const [count, setCount] = useState(0);`
+
+2. A great substitute for componentDidMount, componentDidUpdate, componentWillUnmount put together
+- No clearnup required
+- Tell React that component needs to do something after rendering
+```
+useEffect(() => {
+    document.title = `You clicked ${count} times`;
+  });
+```
+
+- Rules
+1. Always call Hooks at the top-level, not within loops, conditionals, nested functions
+2. Only call Hooks from React function components or other custom Hooks
